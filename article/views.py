@@ -1,9 +1,9 @@
+from datetime import datetime
 from django.shortcuts import render
-
-# Create your views here.
 from django.http import HttpResponse
 from article.models import ArticleModel
 
+# Create your views here.
 def home(request):
     return HttpResponse('Hello world, Django!')
 
@@ -13,3 +13,6 @@ def detail(request, param):
 def article(request, id):
     a1 = ArticleModel.objects.get(id=int(id))
     return HttpResponse('title: %s<br>content: %s<br>' % (a1.title, a1.content))
+
+def test(request):
+    return render(request, 'test.html', {'current_time': datetime.now()})

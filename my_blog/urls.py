@@ -21,5 +21,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', article.views.home),
     url(r'^(?P<id>\d+)$', article.views.article),
-    url(r'^id=(?P<id>\d+)$', article.views.article)
+    url(r'^id=(?P<id>\d+)$', article.views.article),
+    url(r'^test$', article.views.test)
 ]
