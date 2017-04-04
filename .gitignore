@@ -57,3 +57,6 @@ target/
 
 # python virtualenv
 venv/
+
+# db
+*.sqlite3
