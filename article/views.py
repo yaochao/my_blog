@@ -16,3 +16,7 @@ def article(request, id):
 
 def test(request):
     return render(request, 'test.html', {'current_time': datetime.now()})
+
+def index(request):
+    posts = ArticleModel.objects.all()
+    return render(request, 'index.html', {'posts': posts})

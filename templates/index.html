@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="posts">
+        {% for post in posts %}
+            <section class="post">
+                <header class="post-header">
+                    <h2 class="post-title"><a>{{ post.title }}</a></h2>
+                    <div class="post-meta">category:<a href="#" class="post-category post-category-js">{{ post.category }}</a></div>
+                    <div class="post-meta">time:<a href="#" class="post-category post-category-js">{{ post.date_time }}</a></div>
+                </header>
+                <div class="post-detail">
+                    <p>{{ post.content }}</p>
+                </div>
+            </section>
+        {% endfor %}
+    </div>
+{% endblock %}
